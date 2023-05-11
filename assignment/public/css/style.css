@@ -1,0 +1,50 @@
+.logo {
+    width: 150px;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner-info {
+    position: absolute;
+    left: 50px;
+    top: 650px;
+    color: white;
+    font-size: 28px;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+footer {
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #8f8f8f;
+}
+
+.about {
+    padding: 50px;
+}
+
+.about p {
+    font-size: 25px;
+}
+
+.about-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-row img {
+    max-width: 50%;
+}
+
+.about-row p {
+    font-size: 20px;
+    padding: 0 50px;
+}
