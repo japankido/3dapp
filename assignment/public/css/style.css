@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
+
+.logo {
+    font-size: 50px;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 700;
+    text-shadow: -15px 5px 20px #ced0d3;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #F9f1cc;
+    text-shadow: 2px 2px 0px #d94043, 4px 4px 0px #d01956, 6px 6px 0px #FF80BF, 8px 8px 0px #EF5097, 10px 10px 0px #6868AC, 12px 12px 0px #90B1E0;
+    margin-left: 30px;
+}
+
+.navbar-brand > em {
+    font-family: 'Calligraffitti', cursive;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner-info {
+    position: absolute;
+    left: 50px;
+    top: 650px;
+    color: white;
+    font-size: 28px;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    text-align: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    gap: 20px;
+}
+
+footer > div:first-child {
+    width: 300px;
+    white-space: nowrap;
+}
+
+.about {
+    padding: 50px;
+}
+
+.about p {
+    font-size: 25px;
+}
+
+.about-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-row img {
+    max-width: 50%;
+}
+
+.about-row p {
+    font-size: 20px;
+    padding: 0 50px;
+}
+
+.image-gallary {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.image-gallary img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.reference {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    list-style-type: none;
+}
+
+.reference li {
+    margin-bottom: 10px;
+}
+
+.reference li a {
+    color: white;
+}
+
+#statement {
+    cursor: pointer;
+}
+
+.description {
+    text-align: center;
+}
