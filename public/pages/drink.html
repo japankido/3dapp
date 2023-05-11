@@ -69,22 +69,49 @@
                         <div class="row">
                             <x3d width='100%' height='400px'>
                                 <scene>
-                                    <inline id="model_inline" url="../x3d/roses.x3d"> </inline>
+                                    <Transform>
+                                        <inline id="model_inline" url="../x3d/roses.x3d"> </inline>
+                                    </Transform>
                                 </scene>
                             </x3d>
+                            <div id="desc" class="description">Established in 1867, Rose's was the world's first concentrated fruit drink.</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card mb-2">
                     <div class="card-header">
-                        Featured
+                        Actions:
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="row mb-5">
+                            <div class="mb-2">Camera: </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button id="frontBtn" type="button" class="btn btn-primary">Default</button>
+                                <button type="button" class="btn btn-primary">Back</button>
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button id="rightBtn" type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="mb-2">Animation: </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Default</button>
+                                <button type="button" class="btn btn-primary">Back</button>
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-2">Render: </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Default</button>
+                                <button type="button" class="btn btn-primary">Back</button>
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
