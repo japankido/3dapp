@@ -11,12 +11,28 @@
 		                type='"EXAMINE", "ANY"'
 		                avatarSize="0.25, 1.75, 0.75"
 		                />
+		<Transform DEF="Camera_TRANSFORM"
+		           translation="0.298273 0.284796 -0.654889"
+		           scale="0.128134 0.128134 0.128134"
+		           rotation="-0.033651 0.989707 0.139095 2.671570"
+		           >
 			<Viewpoint DEF="CA_Camera"
 			           centerOfRotation="0 0 0"
-			           position="0.00 -0.00 0.00"
-			           orientation="0.71 -0.71 0.01 0.00"
+			           position="-0.00 -0.00 -0.00"
+			           orientation="-0.74 -0.65 0.16 0.00"
 			           fieldOfView="0.691"
 			           />
+		</Transform>
+		<Transform DEF="Cylinder_TRANSFORM"
+		           translation="0.000000 0.000000 0.000000"
+		           scale="1.000000 1.000000 1.000000"
+		           rotation="0.000000 0.707107 0.707107 3.141593"
+		           >
+			<Transform DEF="Cylinder_ifs_TRANSFORM"
+			           translation="0.000000 0.000000 0.000000"
+			           scale="1.000000 1.000000 1.000000"
+			           rotation="0.000000 1.000000 0.000000 0.000000"
+			           >
 				<Group DEF="group_ME_Cylinder">
 					<Shape>
 						<Appearance>
@@ -28,7 +44,7 @@
 							          shininess="0.500"
 							          transparency="0.0"
 							          />
-							<ImageTexture url='"../images/Monster-Energy.jpg"'/>
+							<ImageTexture url='"./images/Monster-Energy.jpg"'/>
 						</Appearance>
 						<IndexedFaceSet solid="false"
 						                creaseAngle="4.0000"
