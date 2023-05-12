@@ -85,14 +85,7 @@
         <div id="statement" data-bs-toggle="modal" data-bs-target="#exampleModal1">Statement of Originality</div>
         <div>
             <div><strong>Reference</strong></div>
-            <ul class="reference">
-                <li><a href="https://www.x3dom.org/">X3DOM</a></li>
-                <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
-                <li><a href="https://www.slimframework.com/">Slim Framework</a></li>
-                <li><a href="https://jquery.com/">jQuery</a></li>
-                <li><a href="https://www.blender.org/">Blender</a></li>
-                <li><a href="https://www.w3schools.com/html/">HTML5</a></li>
-                <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+            <ul id="reference" class="reference">
             </ul>
         </div>
     </footer>
@@ -114,5 +107,7 @@
         </div>
     </div>
     <script src="../assignment/application/js/bootstrap.min.js"></script>
+    <script src="../assignment/application/js/jquery-3.6.4.min.js"></script>
+    <script src="../assignment/application/js/references.js"></script>
 </body>
 </html>
