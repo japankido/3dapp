@@ -67,9 +67,9 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <x3d width='100%' height='400px'>
+                            <x3d id="x3d" width='100%' height='400px'>
                                 <scene>
-                                    <Viewpoint DEF="CA_Camera"
+                                    <Viewpoint id="front" DEF="CA_Camera"
                                                centerOfRotation="0 0 0"
                                                position="20.00 -0.00 0.00"
                                                orientation="-3.304e-005 -1 -3.304e-005 -1.571"
@@ -87,9 +87,36 @@
                                                orientation="0 1 0 -1.571"
                                                fieldOfView="0.237"
                                     ></Viewpoint>
-                                    <Transform>
+                                    <Viewpoint id="back" DEF="CA_Camera"
+                                               centerOfRotation="0 0 0"
+                                               position="0.00 -0.00 -20.00"
+                                               orientation="0 -1 0 -3.142"
+                                               fieldOfView="0.237"
+                                    ></Viewpoint>
+                                    <Viewpoint id="top" DEF="CA_Camera"
+                                               centerOfRotation="0 0 0"
+                                               position="0.00 20.00 0.00"
+                                               orientation="1 0 0 -1.571"
+                                               fieldOfView="0.237"
+                                    ></Viewpoint>
+                                    <Viewpoint id="bottom" DEF="CA_Camera"
+                                               centerOfRotation="0 0 0"
+                                               position="0.00 -20.00 -0.10"
+                                               orientation="0 -0.7071 0.7071 -3.142"
+                                               fieldOfView="0.237"
+                                    ></Viewpoint>
+
+                                     <!-- CONTROLS ROTATION OF THE MODEL-->
+                                    <Transform DEF='Drink_Wrapper'>
                                         <inline id="model_inline" url="../assignment/application/assets/x3d/roses.x3d"> </inline>
                                     </Transform>
+
+                                    <timeSensor id="timeSensor" DEF='clock' cycleInterval='8' loop='true' enabled="false"></timeSensor>
+                                    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+
+                                    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+                                    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='Drink_Wrapper' toField='set_rotation'></ROUTE>
+
                                 </scene>
                             </x3d>
                             <div id="desc" class="description">Established in 1867, Rose's was the world's first concentrated fruit drink.</div>
@@ -110,24 +137,21 @@
                                 <button id="backBtn" type="button" class="btn btn-primary">Back</button>
                                 <button id="leftBtn" type="button" class="btn btn-primary">Left</button>
                                 <button id="rightBtn" type="button" class="btn btn-primary">Right</button>
+                                <button id="topBtn" type="button" class="btn btn-primary">Top</button>
+                                <button id="bottomBtn" type="button" class="btn btn-primary">Bottom</button>
                             </div>
                         </div>
                         <div class="row mb-5">
                             <div class="mb-2">Animation: </div>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Default</button>
-                                <button type="button" class="btn btn-primary">Back</button>
-                                <button type="button" class="btn btn-primary">Left</button>
-                                <button type="button" class="btn btn-primary">Right</button>
+                                <button id="rotate" type="button" class="btn btn-primary">Rotate</button>
+                                <button id="stopRotate" type="button" class="btn btn-primary">Stop</button>
                             </div>
                         </div>
                         <div class="row">
                             <div class="mb-2">Render: </div>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Default</button>
-                                <button type="button" class="btn btn-primary">Back</button>
-                                <button type="button" class="btn btn-primary">Left</button>
-                                <button type="button" class="btn btn-primary">Right</button>
+                                <button id="wire" type="button" class="btn btn-primary">Wire</button>
                             </div>
                         </div>
                     </div>

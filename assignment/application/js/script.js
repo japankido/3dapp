@@ -20,8 +20,34 @@ $('#frontBtn').click(function() {
 
 $('#rightBtn').click(function() {
   $("#right").attr("set_bind", "true");
-})
+});
 
 $('#leftBtn').click(function() {
   $("#left").attr("set_bind", "true");
-})
+});
+
+$('#backBtn').click(function() {
+  $("#back").attr("set_bind", "true");
+});
+
+$('#topBtn').click(function() {
+  $("#top").attr("set_bind", "true");
+});
+
+$('#bottomBtn').click(function() {
+  $("#bottom").attr("set_bind", "true");
+});
+
+$('#wire').click(function() {
+  var e = document.getElementById('x3d');
+  e.runtime.togglePoints(true);
+  e.runtime.togglePoints(true);
+});
+
+$('#rotate').click(function() {
+  $('#timeSensor').attr('enabled', 'true');
+});
+
+$('#stopRotate').click(function() {
+  $('#timeSensor').attr('enabled', 'false');
+});
